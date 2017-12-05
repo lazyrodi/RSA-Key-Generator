@@ -20,19 +20,6 @@ public class RSA {
 		return null;
 	}
 
-	public static byte[] hexStrToByteArr(String hex) {
-		if (hex == null || hex.length() == 0) {
-			return null;
-		}
-
-		byte[] byteArr = new byte[hex.length() / 2];
-
-		for (int i = 0; i < byteArr.length; i++) {
-			byteArr[i] = (byte) Integer.parseInt(hex.substring(i * 2, i * 2 + 2), 16);
-		}
-		return byteArr;
-	}
-
 	public static String byteArrToHexStr(byte[] byteArr) {
 		if (byteArr == null || byteArr.length == 0) {
 			return null;
